@@ -1,8 +1,9 @@
-def hello_t(name)
-  puts name
-  yield (name)
-end
 
-hello_t(name {|name| puts name } )
+  def hello_t(array)
+    i = 0
 
-# call your method here!
+    while i < array.length
+      yield array[i]
+      i = i + 1
+    end
+  end
